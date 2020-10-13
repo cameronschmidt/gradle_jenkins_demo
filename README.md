@@ -1,1 +1,2 @@
-# gradle_jenkins_demo
+# Demo project - Jenkins and Gradle
+
