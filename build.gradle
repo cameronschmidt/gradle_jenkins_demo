@@ -1,0 +1,33 @@
+/*
+ * Alfa Bank Ukraine training material
+ */
+
+plugins {
+    id 'java'
+    id 'application'
+    id "org.sonarqube" version "3.0"
+}
+
+sonarqube {
+    properties {
+        property "sonar.host.url", "http://localhost:9084"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.projectName", "Alfa Bank Gradle multi-project"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter() 
+    }
+}
+
+subprojects {
+    version = '1.0'
+    sonarqube {
+        properties {
+            property "sonar.sources", "src"
+        }
+    }
+
+}
